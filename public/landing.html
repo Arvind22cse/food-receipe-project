@@ -6,6 +6,7 @@
     <title>Landing</title>
     <link rel="stylesheet" href="landing.css">
 <style>
+/* Background image overlay */
 body::before {
     content: "";
     position: fixed;
@@ -17,62 +18,103 @@ body::before {
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
-    opacity: 0.5;
+    opacity: 0.6;
     z-index: -1;
   }
-  
-  body {
+
+/* Body styling */
+body {
     margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
-    width: 100%;
-    height: 100%;
-  }
-  
-  h1 {
-    color: rgb(14, 14, 14);
-    font-size: 20px;
-  }
-  
-  p {
-    color: rgb(74, 71, 71);
-  }
-  
-  legend {
-    color: rgb(4, 4, 4);
-    font-family: Algerian;
-    font-size: 30px;
-  }
-  
-  span {
-    color: rgb(58, 47, 47);
-    font-size: 15px;
-  }
-  
-  .topnav {
-    overflow: hidden;
-    background-color: #333;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
     display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: rgba(0, 0, 0, 0.7); /* Background overlay */
+}
+
+/* Container styling */
+form {
+    width: 80%;
+    max-width: 700px;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
     border-radius: 10px;
-  }
-  
-  .topnav a {
-    float: none;
-    color: #f2f2f2;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Legend styling */
+legend {
+    color: #4A4A4A;
+    font-family: 'Georgia', serif;
+    font-size: 28px;
     text-align: center;
-    padding: 14px 16px;
+    letter-spacing: 1.5px;
+}
+
+/* Heading styling */
+h1 {
+    color: #333;
+    font-size: 22px;
+    text-align: center;
+    font-weight: 600;
+    margin-top: 20px;
+}
+
+/* Paragraph and span styling */
+p {
+    color: #555;
+    line-height: 1.6;
+    margin: 15px 0;
+}
+
+span {
+    font-size: 16px;
+    color: #666;
+    font-weight: bold;
+}
+
+/* Navbar styling */
+.topnav {
+    overflow: hidden;
+    background-color: #444;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    border-radius: 10px;
+    margin: 15px 0;
+    padding: 10px 0;
+}
+
+.topnav a {
+    color: #f0f0f0;
+    text-align: center;
+    padding: 10px 20px;
     text-decoration: none;
-    font-size: 17px;
-  }
-  
-  .topnav a:hover {
+    font-size: 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.topnav a:hover {
     background-color: #ddd;
-    color: black;
-  }
-  
-  .topnav a.active {
-    background-color: #000000;
-    color: white;
-  }
+    color: #333;
+}
+
+.topnav a.active {
+    background-color: #555;
+    color: #fff;
+}
+
+/* Quote styling */
+p blockquote {
+    font-style: italic;
+    color: #444;
+    margin: 20px 0;
+    padding-left: 20px;
+    border-left: 3px solid #888;
+}
 </style>
 </head>
 <body>
@@ -81,7 +123,7 @@ body::before {
       <legend>AAB COMPANY</legend>
       <div class="topnav">
         <a class="active">ABOUT</a>
-        <a href="/buy">RECEIPE</a>
+        <a href="/buy">RECIPE</a>
         <a href="/signin">SIGN-IN</a>
       </div>
       <h1>AAB RESTAURANT</h1>
@@ -94,16 +136,14 @@ body::before {
         What sets us apart? It's our commitment to quality. We source only the freshest produce, finest meats, and premium ingredients for our dishes. Our chefs craft each recipe with care, using authentic techniques that have been passed down through generations. We believe that great food starts with great ingredients, and that's why we never compromise on quality.<br><br>
         But it's not just about what's on the plate; it's about the people behind it. Our team is made up of dedicated culinary artisans who are passionate about their craft. From our skilled chefs who prepare each dish to perfection, to our friendly waitstaff who ensure your dining experience is exceptional, every member of our team plays a vital role in bringing you the ultimate dining experience.<br><br>
         At AAB Restaurant, we're not just in the business of making food; we're in the business of making memories. Whether it's a casual weeknight dinner with family, a fun-filled gathering with friends, or a special celebration, we're here to make every moment deliciously memorable.<br><br>
-        <br>
-  "Food is a universal language. Everyone loves it."<br>
-  "Good food is the only thing that can cheer me up on a bad day."<br>
-  "Food is not just sustenance, it's an emotion."<br>
-  "Good food is proof that life is meant to be enjoyed."<br>
-  "Food is like a blank canvas. You can create anything you want with it."<br>
-  "Good food is the answer to all of life's problems."<br><br><br>
-  Sincerely,<br>
-        
-        [ARVIND,ASHWANTH,BHARATH]<br>
+        <blockquote>"Food is a universal language. Everyone loves it."</blockquote>
+        <blockquote>"Good food is the only thing that can cheer me up on a bad day."</blockquote>
+        <blockquote>"Food is not just sustenance, it's an emotion."</blockquote>
+        <blockquote>"Good food is proof that life is meant to be enjoyed."</blockquote>
+        <blockquote>"Food is like a blank canvas. You can create anything you want with it."</blockquote>
+        <blockquote>"Good food is the answer to all of life's problems."</blockquote><br>
+        Sincerely,<br>
+        [ARVIND, ASHWANTH, BHARATH]<br>
         Founder, [AAB]
       </p>
     </fieldset>
