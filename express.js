@@ -6,7 +6,7 @@ const bodyParser = require("body-parser");
 const app = express();
 const port = 8000; 
 
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, "public")));
 
 app.use(bodyParser.urlencoded({ extended: true }));
 
@@ -28,24 +28,24 @@ MongoClient.connect(mongoUrl)
         console.error("Error connecting to MongoDB:", err);
         process.exit(1); 
     });
-
+app.use(express.static(path.join(__dirname, "public")));
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname,  'index.html'));
+    res.sendFile(path.join(__dirname,"public",  'index.html'));
 });
 
 app.get("/buy", (req, res) => {
-    res.sendFile(path.join(__dirname, 'buy.html'));
+    res.sendFile(path.join(__dirname, "public", 'buy.html'));
 });
 
 app.get("/signin", (req, res) => {
-    res.sendFile(path.join(__dirname,  'signin.html'));
+    res.sendFile(path.join(__dirname, "public",  'signin.html'));
 });
 
 app.get("/signup", (req, res) => {
-    res.sendFile(path.join(__dirname,  'signup.html'));
+    res.sendFile(path.join(__dirname, "public",  'signup.html'));
 });
 app.get("/error", (req, res) => {
-    res.sendFile(path.join(__dirname, 'error.html'));
+    res.sendFile(path.join(__dirname,"public",  'error.html'));
 });
 
 app.post("/signup", async (req, res) => {
