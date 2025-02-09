@@ -30,22 +30,22 @@ MongoClient.connect(mongoUrl)
     });
 
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'public', 'landing.html'));
+    res.sendFile(path.join(__dirname,  'index.html'));
 });
 
 app.get("/buy", (req, res) => {
-    res.sendFile(path.join(__dirname, 'public', 'buy.html'));
+    res.sendFile(path.join(__dirname, 'buy.html'));
 });
 
 app.get("/signin", (req, res) => {
-    res.sendFile(path.join(__dirname, 'public', 'signin.html'));
+    res.sendFile(path.join(__dirname,  'signin.html'));
 });
 
 app.get("/signup", (req, res) => {
-    res.sendFile(path.join(__dirname, 'public', 'signup.html'));
+    res.sendFile(path.join(__dirname,  'signup.html'));
 });
 app.get("/error", (req, res) => {
-    res.sendFile(path.join(__dirname, 'public', 'error.html'));
+    res.sendFile(path.join(__dirname, 'error.html'));
 });
 
 app.post("/signup", async (req, res) => {
